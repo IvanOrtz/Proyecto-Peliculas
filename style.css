@@ -30,9 +30,9 @@ body {
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
 }
 #btn-up {
-  position: fixed;      /* Siempre visible */
-  bottom: 20px;         /* Distancia desde abajo */
-  right: 20px;          /* Distancia desde la derecha */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   padding: 10px 15px;
   font-size: 18px;
   border: none;
@@ -77,10 +77,14 @@ body {
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
+
+/* --- AQUI TU SELECT BASE --- */
 select {
-    background-color: rgba(255,255,255,0.9); /* color sólido semitransparente */
-    color: #000; /* texto visible */
+    background-color: rgba(255,255,255,0.9);
+    color: #000;
 }
+
+/* --- INPUTS Y SELECT DEL FORMULARIO --- */
 #busquedaForm input,
 #busquedaForm select {
     padding: 12px 18px;
@@ -94,6 +98,16 @@ select {
     transition: all 0.25s ease;
     backdrop-filter: blur(8px);
 }
+
+/* =====================================================
+   ★ OPCIÓN 1 (corregida): MENÚ DESPLEGABLE OSCURO ★
+===================================================== */
+#busquedaForm select option {
+    background: #222; /* fondo oscuro */
+    color: white;     /* texto blanco */
+}
+
+/* ===================================================== */
 
 #busquedaForm input::placeholder {
     color: #ddd;
@@ -151,7 +165,7 @@ select {
 ======================= */
 #peliculas {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Siempre 5 columnas en desktop */
+    grid-template-columns: repeat(5, 1fr);
     gap: 22px;
     padding: 20px;
 }
@@ -295,13 +309,13 @@ select {
 ======================= */
 @media (max-width: 1200px) {
     #peliculas {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas en laptops pequeños */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 992px) {
     #peliculas {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -317,7 +331,7 @@ select {
         width: 90%;
     }
     #peliculas {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles grandes */
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
     .detalle img {
@@ -341,7 +355,7 @@ select {
         width: 95%;
     }
     #peliculas {
-        grid-template-columns: 1fr; /* 1 columna en móviles pequeños */
+        grid-template-columns: 1fr;
         gap: 12px;
     }
     .detalle h2 {

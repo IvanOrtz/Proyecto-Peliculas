@@ -42,7 +42,9 @@ function lanzaPeticionDetalle(imdbID) {
             detalle.classList.add("detalle");
 
             detalle.innerHTML = `
-                <img src="${data.Poster}" alt="${data.Title}">
+                <img src="${data.Poster !== "N/A" ? data.Poster : './img/image_notFound.png'}" 
+            alt="${data.Title}" 
+            onerror="this.src='./img/image_notFound.png'">
                 <div class="info">
                     <h2>${data.Title}</h2>
                     <button id="cerrarDetalle" class="cerrar-btn">&times;</button>
