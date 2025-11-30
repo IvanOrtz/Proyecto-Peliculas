@@ -8,6 +8,10 @@ body {
         rgba(0,0,0,0.6),
         rgba(0,0,0,0.6)
     ), url(./img/fondo.jpg);
+<<<<<<< HEAD
+=======
+    background-size:auto;
+>>>>>>> cf8d8d68617756b4a2c7afeec364487730e573cc
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
